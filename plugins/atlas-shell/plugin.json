@@ -1,0 +1,10 @@
+{
+  "name": "atlas-shell",
+  "description": "The Places Map's page shell: the Field Atlas bar with the search, the Export link and the Add place action.",
+  "requires": [],
+  "inject": ["atlas", "router"],
+  "provides": ["shell"],
+  "dependencies": { "@deepseek-ai/cordis": "4.0.4" },
+  "mount": "a row `- id: atlas-shell` / `name: atlas-shell` after the atlas row and before the page rows in blend.yaml",
+  "config": { "prefix": "the mount prefix the frame host chose; set by createApp, not by hand" }
+}

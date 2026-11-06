@@ -1,0 +1,10 @@
+{
+  "name": "atlas",
+  "description": "The Places Map's domain: places, categories, collections, search, visit state and the GeoJSON export, saved as JSON in the app's data home.",
+  "requires": [],
+  "inject": ["appInstance"],
+  "provides": ["atlas"],
+  "dependencies": { "@deepseek-ai/cordis": "4.0.4" },
+  "mount": "a row `- id: atlas` / `name: atlas` before the page rows in blend.yaml; a page injects the `atlas` service",
+  "config": { "file": "the JSON file, relative to the app's home (default places-map.json)", "store": "a Store port for tests", "clock": "what time it is, for tests", "newId": "how ids are made, for tests" }
+}

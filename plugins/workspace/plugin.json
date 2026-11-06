@@ -1,0 +1,9 @@
+{
+  "name": "workspace",
+  "description": "The map workspace at /: saved places, category filters, search, the illustrative vector map with markers and the selected place detail, plus the GeoJSON export.",
+  "requires": [],
+  "inject": ["atlas", "shell", "router"],
+  "provides": [],
+  "dependencies": { "@deepseek-ai/cordis": "4.0.4" },
+  "mount": "a row `- id: workspace` / `name: workspace` after the shell row in blend.yaml"
+}

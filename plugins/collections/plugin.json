@@ -1,0 +1,9 @@
+{
+  "name": "collections",
+  "description": "Collections at /collections: the named lists with counts and the category totals.",
+  "requires": [],
+  "inject": ["atlas", "shell", "router"],
+  "provides": [],
+  "dependencies": { "@deepseek-ai/cordis": "4.0.4" },
+  "mount": "a row `- id: collections` / `name: collections` after the places row in blend.yaml"
+}

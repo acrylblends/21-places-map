@@ -1,0 +1,43 @@
+# The app as data, in ACRYL's Blend format (blends.acryl.dev/v1alpha1): which plugins it mounts, in what order, with what config.
+apiVersion: blends.acryl.dev/v1alpha1
+kind: Blueprint
+metadata:
+  id: acrylblends.places-map
+  name: "Places Map"
+  version: 0.1.0
+  category: geographic
+  description: "A map-first personal atlas: eight Vienna places across four categories, filters and search, a vector map with markers, place details, notes, visit state, collections and GeoJSON export."
+  license: MIT
+  visibility: public
+spec:
+  runtime: cordis
+  parameters:
+    hostname: { type: string, default: 127.0.0.1 }
+  rows:
+    - id: router
+      name: acryl-router
+    - id: home
+      name: home
+    # The domain: places, categories, collections, search and the GeoJSON export, saved as JSON in the app's data home.
+    - id: atlas
+      name: atlas
+    # The Field Atlas bar with the search, Export and Add place actions.
+    - id: atlas-shell
+      name: atlas-shell
+    # The map workspace at /: saved places, category filters, markers and the selected place detail.
+    - id: workspace
+      name: workspace
+    # Places: the add form at /places/new, the note editor and the visited action.
+    - id: places
+      name: places
+    # Collections at /collections: named lists with counts and category totals.
+    - id: collections
+      name: collections
+    - id: extensions
+      name: extensions
+    - id: server
+      name: acryl-node-server
+      config:
+        hostname: "{{parameters.hostname}}"
+    - id: acryl-door
+      name: acryl-door

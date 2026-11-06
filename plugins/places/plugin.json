@@ -1,0 +1,9 @@
+{
+  "name": "places",
+  "description": "Places: the add form at /places/new with coordinate validation, the note editor and the visited action.",
+  "requires": [],
+  "inject": ["atlas", "shell", "router"],
+  "provides": [],
+  "dependencies": { "@deepseek-ai/cordis": "4.0.4" },
+  "mount": "a row `- id: places` / `name: places` after the workspace row in blend.yaml"
+}
